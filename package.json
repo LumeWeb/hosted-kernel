@@ -6,7 +6,7 @@
     "_id": "@lumeweb/hosted-kernel@0.1.0",
     "repository": {
         "type": "git",
-        "url": "gitea@git.lumeweb.com:LumeWeb/libkernel.git"
+        "url": "gitea@git.lumeweb.com:LumeWeb/hosted-kernel.git"
     },
     "scripts": {
         "prepare": "presetter bootstrap",
