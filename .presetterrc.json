@@ -1,0 +1,23 @@
+{
+    "preset": [
+        "@lumeweb/presetter-kernel-module-preset"
+    ],
+    "config": {
+        "official": true,
+        "vite": {
+            "build": {
+                "lib": {
+                    "formats": {
+                        "0": "umd"
+                    }
+                }
+            }
+        }
+    },
+    "scripts": {
+        "build": "cross-env NODE_ENV=production run-s clean  build:typescript:* build:vite build:html",
+        "build:vite": "vite build && shx mv lib/*.cjs lib/bootloader.js",
+        "build:html": "shx cp src/index.html lib/index.html"
+    }
+}
+
