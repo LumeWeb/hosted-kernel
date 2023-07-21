@@ -16,7 +16,7 @@
         "@lumeweb/presetter-kernel-module-preset": "^0.1.0-develop.43"
     },
     "dependencies": {
-        "@lumeweb/libweb": "^0.2.0-develop.27",
+        "@lumeweb/libweb": "0.2.0-develop.27",
         "binconv": "^0.2.0"
     }
 }
