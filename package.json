@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "@lumeweb/libweb": "0.2.0-develop.27",
+        "@noble/ciphers": "^0.1.4",
         "binconv": "^0.2.0"
     }
 }
