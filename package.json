@@ -1,9 +1,8 @@
 {
     "name": "@lumeweb/hosted-kernel",
-    "version": "0.1.0",
+    "version": "0.1.0-develop.1",
     "type": "module",
     "readme": "ERROR: No README data found!",
-    "_id": "@lumeweb/hosted-kernel@0.1.0",
     "repository": {
         "type": "git",
         "url": "gitea@git.lumeweb.com:LumeWeb/hosted-kernel.git"
