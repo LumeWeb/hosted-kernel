@@ -1,0 +1,6 @@
+# [0.1.0-develop.1](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.0.1...v0.1.0-develop.1) (2023-07-21)
+
+
+### Features
+
+* initial version ([3e9e5ed](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/3e9e5eda97cfc05f88575d1240f56fbf8543984c))
