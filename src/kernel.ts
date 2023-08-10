@@ -1,6 +1,6 @@
 import {
   addContextToErr,
-  downloadObject,
+  downloadSmallObject,
   Err,
   maybeInitDefaultPortals,
   setActivePortalMasterKey,
@@ -100,7 +100,7 @@ export async function loadKernel() {
 async function downloadKernel(
   kernelCid: string,
 ): Promise<[kernelCode: ReadableStream, err: Err]> {
-  const [code, err] = await downloadObject(kernelCid);
+  const [code, err] = await downloadSmallObject(kernelCid);
 
   if (err != null) {
     return [null as any, err];
