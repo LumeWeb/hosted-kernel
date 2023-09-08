@@ -3,7 +3,7 @@ import {
   getLoginComplete,
   getLogoutComplete,
 } from "./vars.js";
-import { objAsString } from "@lumeweb/libweb";
+import { objAsString } from "@lumeweb/libkernel";
 
 export function sendAuthUpdate() {
   window.parent.postMessage(

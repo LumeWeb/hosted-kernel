@@ -1,9 +1,9 @@
 import {
-  addContextToErr,
   bytesToHex,
   hexToBytes,
   setActivePortalMasterKey,
 } from "@lumeweb/libweb";
+import { addContextToErr } from "@lumeweb/libkernel";
 import {
   getLoginComplete,
   getLogoutComplete,

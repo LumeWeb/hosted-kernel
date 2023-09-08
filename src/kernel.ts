@@ -1,7 +1,5 @@
 import {
-  addContextToErr,
   downloadSmallObject,
-  Err,
   maybeInitDefaultPortals,
   setActivePortalMasterKey,
 } from "@lumeweb/libweb";
@@ -13,6 +11,7 @@ import {
 } from "./vars.js";
 import { getStoredUserKey } from "./storage.js";
 import { readableStreamToBlob } from "binconv";
+import { addContextToErr } from "@lumeweb/libkernel";
 
 export function boot() {
   let userKey;
@@ -38,19 +37,20 @@ export function boot() {
 }
 
 export async function loadKernel() {
-  let [, portalLoadErr] = maybeInitDefaultPortals();
-  if (portalLoadErr) {
-    let err = addContextToErr(portalLoadErr, "unable to init portals");
+  try {
+    maybeInitDefaultPortals();
+  } catch (e) {
+    let err = addContextToErr(e, "unable to init portals");
     setKernelLoaded(err);
     logErr(err);
     sendAuthUpdate();
     return;
   }
-
-  let [kernelCode, err] = await downloadDefaultKernel();
-
-  if (err !== null) {
-    let extErr = addContextToErr(err, "unable to download kernel");
+  let kernelCode;
+  try {
+    kernelCode = await downloadDefaultKernel();
+  } catch (e) {
+    let extErr = addContextToErr(e, "unable to download kernel");
     setKernelLoaded(extErr);
     logErr(extErr);
     sendAuthUpdate();
@@ -97,20 +97,10 @@ export async function loadKernel() {
   }
 }
 
-async function downloadKernel(
-  kernelCid: string,
-): Promise<[kernelCode: ReadableStream, err: Err]> {
-  const [code, err] = await downloadSmallObject(kernelCid);
-
-  if (err != null) {
-    return [null as any, err];
-  }
-
-  return [code, null];
+async function downloadKernel(kernelCid: string): Promise<ReadableStream> {
+  return await downloadSmallObject(kernelCid);
 }
 
-function downloadDefaultKernel(): Promise<
-  [kernelCode: ReadableStream, err: Err]
-> {
+function downloadDefaultKernel(): Promise<ReadableStream> {
   return downloadKernel(defaultKernelLink);
 }
