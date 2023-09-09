@@ -53,6 +53,7 @@ export async function handleIncomingMessage(event: MessageEvent) {
       {
         nonce: event.data.nonce,
         data: response,
+        method: "response",
       },
       event.origin,
     );
