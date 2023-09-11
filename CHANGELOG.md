@@ -1,3 +1,10 @@
+# [0.1.0-develop.11](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.10...v0.1.0-develop.11) (2023-09-09)
+
+
+### Bug Fixes
+
+* set method in response ([167dbe5](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/167dbe5c342277c1003c5c9538c52d4e70770170))
+
 # [0.1.0-develop.10](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.9...v0.1.0-develop.10) (2023-09-09)
 
 # [0.1.0-develop.9](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.8...v0.1.0-develop.9) (2023-09-08)
