@@ -13,6 +13,8 @@ import { getStoredUserKey } from "./storage.js";
 import { readableStreamToBlob } from "binconv";
 import { addContextToErr } from "@lumeweb/libkernel";
 
+let kernelLoadAttempt = false;
+
 export function boot() {
   let userKey;
 
@@ -37,6 +39,12 @@ export function boot() {
 }
 
 export async function loadKernel() {
+  if (kernelLoadAttempt) {
+    return;
+  }
+
+  kernelLoadAttempt = true;
+
   try {
     maybeInitDefaultPortals();
   } catch (e) {
