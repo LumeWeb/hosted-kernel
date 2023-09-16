@@ -1,3 +1,11 @@
+# [0.1.0-develop.12](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.11...v0.1.0-develop.12) (2023-09-11)
+
+
+### Bug Fixes
+
+* prevent loadKernel from running twice ([1329712](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/132971257354b73cbc6f1185dfaebaa4c9f925d3))
+* save portals after booting, but before executing the kernel ([1f3cb20](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/1f3cb20bd424ae07bff97e9c5d79186ad533a349))
+
 # [0.1.0-develop.11](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.10...v0.1.0-develop.11) (2023-09-09)
 
 
