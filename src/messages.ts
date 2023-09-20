@@ -14,6 +14,10 @@ export async function handleIncomingMessage(event: MessageEvent) {
     return;
   }
 
+  if (event.origin.endsWith(".module.kernel.lumeweb.com")) {
+    return;
+  }
+
   if (!("nonce" in event.data)) {
     (event.source as WindowProxy).postMessage(
       {
