@@ -1,3 +1,10 @@
+# [0.1.0-develop.14](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.13...v0.1.0-develop.14) (2023-09-20)
+
+
+### Bug Fixes
+
+* add check for new worker domains and ignore any origins from them ([4410def](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/4410def18c03af1dfbd7271ce6a234331dfa4615))
+
 # [0.1.0-develop.13](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.12...v0.1.0-develop.13) (2023-09-16)
 
 # [0.1.0-develop.12](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.11...v0.1.0-develop.12) (2023-09-11)
