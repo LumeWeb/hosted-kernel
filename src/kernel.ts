@@ -2,6 +2,7 @@ import {
   downloadSmallObject,
   maybeInitDefaultPortals,
   savePortals,
+  savePortalSessions,
   setActivePortalMasterKey,
 } from "@lumeweb/libweb";
 import { log, logErr, sendAuthUpdate } from "./util.js";
@@ -67,6 +68,7 @@ export async function loadKernel() {
   }
 
   savePortals();
+  savePortalSessions();
 
   try {
     await new Promise(async (resolve, reject) => {
