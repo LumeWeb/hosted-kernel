@@ -1,3 +1,12 @@
+# [0.1.0-develop.17](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.16...v0.1.0-develop.17) (2023-11-04)
+
+
+### Bug Fixes
+
+* correct handling of error code ([312f8ab](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/312f8ab43a5f781817e9b899a938719699c197c8))
+* need to call sendAuthUpdate ([31cabc6](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/31cabc6c0a00ebb4e9379c4d81d7e4990457f2d3))
+* need to use try/catch not if ([4e0021e](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/4e0021ef23f47ebc53b065b6221190786ccb6573))
+
 # [0.1.0-develop.16](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.15...v0.1.0-develop.16) (2023-11-04)
 
 
