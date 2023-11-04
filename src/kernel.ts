@@ -62,6 +62,7 @@ export async function boot() {
     await testIndexedDBSupport();
   } catch {
     setKernelLoaded("indexeddb_error");
+    sendAuthUpdate();
     logErr("indexed db is not supported or is blocked");
     return;
   }
