@@ -1,3 +1,11 @@
+# [0.1.0-develop.16](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.15...v0.1.0-develop.16) (2023-11-04)
+
+
+### Bug Fixes
+
+* call savePortalSessions before kernel load ([c5f7059](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/c5f7059161223dfd96a718109bfb3b396539767b))
+* need to add indexeddb detection due to browser security ([cd7ad86](https://git.lumeweb.com/LumeWeb/hosted-kernel/commit/cd7ad86869655cc6dbbe9078c49a295efd435b22))
+
 # [0.1.0-develop.15](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.14...v0.1.0-develop.15) (2023-10-11)
 
 # [0.1.0-develop.14](https://git.lumeweb.com/LumeWeb/hosted-kernel/compare/v0.1.0-develop.13...v0.1.0-develop.14) (2023-09-20)
