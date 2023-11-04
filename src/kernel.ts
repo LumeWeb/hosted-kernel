@@ -17,8 +17,49 @@ import { addContextToErr } from "@lumeweb/libkernel";
 
 let kernelLoadAttempt = false;
 
-export function boot() {
+function testIndexedDBSupport() {
+  return new Promise((resolve, reject) => {
+    // Check for IndexedDB support
+    if (!("indexedDB" in window)) {
+      reject(new Error("IndexedDB is not supported by this browser."));
+    } else {
+      // Attempt to open an IndexedDB database
+      const request = indexedDB.open("test_db", 1);
+
+      request.onerror = function (event) {
+        // Error occurred, reject the promise
+        // @ts-ignore
+        reject(new Error("IndexedDB test error: " + event?.target?.errorCode));
+      };
+
+      request.onsuccess = function (event) {
+        // Success, resolve the promise
+        // @ts-ignore
+        event?.target?.result.close(); // Close the DB when done
+        resolve(true);
+      };
+
+      request.onupgradeneeded = function (event: IDBVersionChangeEvent) {
+        // Database needs to be created or upgraded
+        // @ts-ignore
+        const db = event?.target?.result;
+        if (!db.objectStoreNames.contains("test_store")) {
+          // Create an object store
+          db.createObjectStore("test_store", { keyPath: "id" });
+        }
+      };
+    }
+  });
+}
+
+export async function boot() {
   let userKey;
+
+  if (!(await testIndexedDBSupport())) {
+    setKernelLoaded("indexeddb_error");
+    logErr("indexed db is not supported or is blocked");
+    return;
+  }
 
   try {
     userKey = getStoredUserKey();
