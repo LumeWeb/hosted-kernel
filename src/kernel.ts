@@ -28,8 +28,11 @@ function testIndexedDBSupport() {
 
       request.onerror = function (event) {
         // Error occurred, reject the promise
-        // @ts-ignore
-        reject(new Error("IndexedDB test error: " + event?.target?.errorCode));
+
+        reject(
+          // @ts-ignore
+          new Error("IndexedDB test error: " + event?.target?.error?.code),
+        );
       };
 
       request.onsuccess = function (event) {
