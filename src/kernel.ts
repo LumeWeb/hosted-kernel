@@ -58,7 +58,9 @@ function testIndexedDBSupport() {
 export async function boot() {
   let userKey;
 
-  if (!(await testIndexedDBSupport())) {
+  try {
+    await testIndexedDBSupport();
+  } catch {
     setKernelLoaded("indexeddb_error");
     logErr("indexed db is not supported or is blocked");
     return;
