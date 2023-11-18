@@ -1,7 +1,7 @@
 import { x25519 } from "@noble/curves/ed25519";
 
 export const defaultKernelLink =
-  "z2H7HFjPt7zi4ZPwaoD95Ka9eJzmTPLyvLnLt3Hm75bpR7ApL1qv";
+  "z2H6zWHeWkVFirZ8jCzaPgSXqN9AqQFzQiBC2i4cnKnhwYynrrmA";
 
 const store = new Map<string, any>(
   Object.entries({
